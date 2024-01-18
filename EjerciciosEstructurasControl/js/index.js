@@ -1,4 +1,4 @@
-// 0) Se ingresan por pantalla tres notas de un alumno, si el promedio es mayor o igual a siete mostrar el mensaje 'Promocionado'. Tener en cuenta que para obtener el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3; 
+// 0) Se ingresan por pantalla tres notas de un alumno, si el promedio es mayor o igual a siete mostrar el mensaje 'Promocionado'. Tener en cuenta que para obtener el promedio debemos operar suma=nota1+nota2+nota3; y luego hacer promedio=suma/3;
 
 function ej0() {
     var nota1 = parseInt(prompt("Introduce la primera nota"));
@@ -11,7 +11,7 @@ function ej0() {
     }
 }
 
-// 1) Solicitar que se capture dos veces una clave. Mostrar un mensaje si son iguales (tener en cuenta que para ver si dos variables tienen el mismo valor almacenado debemos utilizar el operador ==). 
+// 1) Solicitar que se capture dos veces una clave. Mostrar un mensaje si son iguales (tener en cuenta que para ver si dos variables tienen el mismo valor almacenado debemos utilizar el operador ==).
 
 function ej1() {
     var clave1 = prompt("Intruduzca la primera clave");
@@ -22,7 +22,7 @@ function ej1() {
     }
 }
 
-// 2) Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo mostrar su suma y diferencia, en caso contrario mostrar el producto y la división del primero respecto al segundo. 
+// 2) Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo mostrar su suma y diferencia, en caso contrario mostrar el producto y la división del primero respecto al segundo.
 
 function ej2() {
     var num1 = parseInt(prompt("Introduce primer número"));
@@ -35,7 +35,7 @@ function ej2() {
     }
 }
 
-// 3) Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 6 mostrar un mensaje ‘bien’, si está entre 4 y 6 'regular', sino 'mal'. 
+// 3) Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 6 mostrar un mensaje ‘bien’, si está entre 4 y 6 'regular', sino 'mal'.
 
 function ej3() {
     var nota1 = parseInt(prompt("Introduce la primera nota"));
@@ -111,10 +111,19 @@ function ej8() {
 // 9) Hacer un programa JavaScript que muestre la tabla de multiplicar de un número que se pide por pantalla. (con alert() y document.write)
 
 function ej9() {
+    var mensaje = "";
     var num = parseInt(prompt("Introduce un número"));
 
-    document.write("<h1>Esta es la tabla de multiplicar del " + num + "</h1>")
+    document.write("<h1>Esta es la tabla de multiplicar del " + num + "</h1>");
+    document.write("<table style = 'border = 1px black solid; border-collapse : collapse;'>");
     for (let i = 0; i <= 10; i++) {
-        document.write(num + " x " + i + " = " + (num * i) + "<br>")
+        document.write("<tr><td style = 'border : 1px black solid; padding : 5px'>");
+        document.write(num + " x " + i + " = " + (num * i) + "<br>");
+        document.write("</td></tr>")
+        mensaje += num + " x " + i + " = " + (num * i) + "\n";
     }
+
+    alert(mensaje);
+
+    document.write("</table>");
 }
